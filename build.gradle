@@ -5,6 +5,9 @@ allprojects {
         }
     }
 }
-configure([project(':consumer'), project(':dispatcher'), project(':query-server')]) {
+configure([project(':consumer'), project(':dispatcher')]) {
     apply plugin: 'java'
+}
+configure([project(':consumer'), project(':query-server')]) {
+    apply plugin: 'war'
 }

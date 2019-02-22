@@ -1,0 +1,17 @@
+buildscript {
+    dependencies {
+        classpath 'org.gretty:gretty:2.2.0'
+    }
+    repositories {
+        jcenter()
+    }
+}
+apply plugin: 'org.gretty'
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
+    testCompile 'junit:junit:4.12'
+}
+repositories {
+    jcenter()
+}
+
