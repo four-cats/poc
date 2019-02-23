@@ -8,6 +8,7 @@ buildscript {
 }
 apply plugin: 'org.gretty'
 dependencies {
+    compile 'org.webjars.npm:vue:2.6.6'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
     testCompile 'junit:junit:4.12'
 }

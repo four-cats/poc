@@ -1,6 +1,7 @@
 package org.commandlinetools.forcats.poc.query.server;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,13 @@ public class Listener extends HttpServlet {
     }
 
     public static String handleQuery(String query) {
-        return "Query Server Listener handleQuery response TBD";
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        }
+        catch(Exception ex) {
+            System.err.println("caught ex" + ex);
+        }
+        return "1000 Query Server Listener handleQuery response TBD";
     }
 }
 
